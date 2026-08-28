@@ -8,6 +8,7 @@ on:
       - "**.html"
       - "**.css"
       - "**.js"
+      - "app-ads.txt"
       - "images/**"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
