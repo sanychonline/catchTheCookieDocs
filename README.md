@@ -1,6 +1,6 @@
 # Catch the Cookie - Timmy Crumble Docs
 
-Public product and support site for **Catch the Cookie - Timmy Crumble** / **Лови печиво - Тимко Хрумко**. The character is **Тимко Хрумко**, chasing cookies in a warm kitchen-themed three-lane arcade run.
+Public product and support site for **Catch the Cookie - Timmy Crumble** / **Тимко Хрумко**. The character is **Тимко Хрумко**, chasing cookies in a warm kitchen-themed three-lane arcade run.
 
 ## Site content
 

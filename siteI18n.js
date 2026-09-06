@@ -51,12 +51,14 @@
   const storageKey = "catch-the-cookie-language";
   const productNames = {
     en: "Catch the Cookie - Timmy Crumble",
-    uk: "Лови печиво - Тимко Хрумко"
+    uk: "Тимко Хрумко"
   };
   const productShortNames = {
     en: "Catch the Cookie",
-    uk: "Лови печиво"
+    uk: "Тимко Хрумко"
   };
+  const legacyUkrainianProductName = "Лови печиво - Тимко Хрумко";
+  const legacyUkrainianShortName = "Лови печиво";
 
   function canonicalizeProductName(value, locale) {
     if (!value) return value;
@@ -64,6 +66,8 @@
     const token = "__CATCH_THE_COOKIE_PRODUCT_NAME__";
     return value
       .replaceAll(productNames.en, token)
+      .replaceAll(legacyUkrainianProductName, token)
+      .replaceAll(legacyUkrainianShortName, token)
       .replaceAll(productNames.uk, token)
       .replaceAll("CatchTheCookie", token)
       .replaceAll("Catch the Cookie", token)
@@ -73,7 +77,7 @@
   function legacyProductSource(value) {
     return value
       .replaceAll(productNames.en, "CatchTheCookie")
-      .replaceAll(productNames.uk, "CatchTheCookie");
+      .replaceAll(productNames.uk, legacyUkrainianProductName);
   }
 
   function normalize(value) {

@@ -872,16 +872,18 @@
   const aliases = { pt: "pt-BR", zh: "zh-Hans" };
   const productNames = {
     en: "Catch the Cookie - Timmy Crumble",
-    uk: "Лови печиво - Тимко Хрумко"
+    uk: "Тимко Хрумко"
   };
   const productShortNames = {
     en: "Catch the Cookie",
-    uk: "Лови печиво"
+    uk: "Тимко Хрумко"
   };
   const metaDescriptions = {
     en: "Support for Catch the Cookie - Timmy Crumble: gameplay, controls, Game Center, ads, purchases, and troubleshooting.",
-    uk: "Підтримка гри Лови печиво - Тимко Хрумко: правила, керування, Game Center, реклама, покупки та усунення проблем."
+    uk: "Підтримка гри Тимко Хрумко: правила, керування, Game Center, реклама, покупки та усунення проблем."
   };
+  const legacyUkrainianProductName = "Лови печиво - Тимко Хрумко";
+  const legacyUkrainianShortName = "Лови печиво";
 
   function canonicalizeProductName(value, locale) {
     if (!value) return value;
@@ -889,6 +891,8 @@
     const token = "__CATCH_THE_COOKIE_PRODUCT_NAME__";
     return value
       .replaceAll(productNames.en, token)
+      .replaceAll(legacyUkrainianProductName, token)
+      .replaceAll(legacyUkrainianShortName, token)
       .replaceAll(productNames.uk, token)
       .replaceAll("CatchTheCookie", token)
       .replaceAll("Catch the Cookie", token)
